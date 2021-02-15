@@ -73,4 +73,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void should_get_the_total_order_value_of_the_items() {
+        restaurant = initializeAndAddItems();
+        int orderValue = restaurant.getOrderValue();
+        assertEquals(388, orderValue);
+
+    }
 }
