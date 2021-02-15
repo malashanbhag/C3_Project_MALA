@@ -65,4 +65,12 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderValue() {
+        int total = 0;
+        for(Item item: menu){
+            total = total + item.getPrice();
+        }
+        return total;
+    }
+
 }
